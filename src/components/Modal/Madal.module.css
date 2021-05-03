@@ -1,0 +1,39 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: rgba(34, 10, 172, 0.826);
+}

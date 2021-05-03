@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
+import ImageGalleryItem from '../ImageGalleryItem';
 import styles from './ImageGallery.module.css';
 
-const ImageGallery = ({ pictures }) => {
+const ImageGallery = ({ pictures, imgClick }) => {
   return (
     <ul className={styles.list}>
-      {pictures.map(({ id, previewURL, pageURL, tags }) => (
+      {pictures.map(({ id, webformatURL, largeImageURL, tags }) => (
         <ImageGalleryItem
           key={id}
-          previewURL={previewURL}
-          pageURL={pageURL}
+          webformatURL={webformatURL}
+          largeImageURL={largeImageURL}
           tags={tags}
+          imgClick={imgClick}
         />
       ))}
     </ul>
@@ -22,7 +23,7 @@ ImageGallery.propTypes = {
   pictures: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.required,
-      previewURL: PropTypes.string,
+      webformatURL: PropTypes.string,
       pageURL: PropTypes.string,
       tags: PropTypes.string,
     }),

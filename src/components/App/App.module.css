@@ -2,6 +2,7 @@
   width: 1300px;
   padding: 0 15px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .headTitle {
@@ -12,4 +13,8 @@
 .title {
   margin-top: 35px;
   font-size: 36px;
+}
+
+.largeImgUrl {
+  width: 100%;
 }

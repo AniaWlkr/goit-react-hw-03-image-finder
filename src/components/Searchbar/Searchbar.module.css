@@ -1,23 +1,41 @@
-.form {
+.searchBar {
   margin-top: 10px;
   padding: 10px;
 
-  align-items: center;
   text-align: center;
   background-color: rgba(34, 10, 172, 0.826);
   border-radius: 4px;
 }
 
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button {
+  transform: translate(105%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: 30px;
   height: 30px;
-  transform: translate(105%);
+
   border-style: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .input {
   width: 300px;
   height: 30px;
   padding: 0 5px 0 35px;
+  border-radius: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
 }
