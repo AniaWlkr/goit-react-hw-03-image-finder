@@ -17,7 +17,6 @@ const IconButton = ({ children, type, handleClick, ...allyProps }) => {
 
 IconButton.propTypes = {
   children: PropTypes.node,
-  'aria-label': PropTypes.string.isRequired,
   handleClick: PropTypes.func,
 };
 

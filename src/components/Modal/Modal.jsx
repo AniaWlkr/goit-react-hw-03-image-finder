@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
-import styles from './Madal.module.css';
+import styles from './Modal.module.css';
 import IconButton from '../../components/IconButton';
 import { ReactComponent as CloseIcon } from '../../components/icons/cross.svg';
 
