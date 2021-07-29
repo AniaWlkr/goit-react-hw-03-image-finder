@@ -46,6 +46,7 @@ const reducer = (state, { type, payload }) => {
 
 const ImagesPage = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  console.log('ImagesPage -> state', state);
 
   useEffect(() => {
     findImages();
@@ -76,13 +77,14 @@ const ImagesPage = () => {
           type: 'setPictures',
           payload: [...state.pictures, ...pictures],
         });
-        dispatch({ type: 'nextPage' });
       })
       .catch(error => dispatch({ type: 'setError', payload: error.message }))
-      .finally(() => dispatch({ type: 'setIsLoading', payload: false }));
+      .finally(() => {
+        dispatch({ type: 'setIsLoading', payload: false });
+      });
   };
 
-  const { pictures, error, isLoading, showModal, largeImgUrl } = this.state;
+  const { pictures, error, isLoading, showModal, largeImgUrl } = state;
 
   return (
     <>
@@ -93,7 +95,7 @@ const ImagesPage = () => {
       {pictures.length > 0 && !isLoading && (
         <Button
           btnLabel="Load more"
-          handleClick={findImages}
+          handleClick={() => dispatch({ type: 'nextPage' })}
           aria-label="Load more"
         />
       )}
